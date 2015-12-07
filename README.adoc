@@ -1,0 +1,53 @@
+= Entorno Dockerizado de CI
+
+En este repositorio encontramos un ambiente que incluye lo siguiente:
+
+* link:https://jenkins-ci.org/[Jenkins]
+* link:http://www.sonarqube.org/[SonarQube]
+* link:http://www.sonatype.org/nexus/[Nexus Repository]
+* link:https://gogs.io/[Gogs] (Git Repository)
+
+== Pre-requisitos
+
+* Instalar link:https://www.virtualbox.org/wiki/Downloads[VirtualBox].
+* Instalar link:http://docs.docker.com/engine/installation[Docker].
+* Instalar link:https://docs.docker.com/machine/install-machine[Docker Machine].
+* Instalar link:https://docs.docker.com/compose/install[Docker Compose].
+
+ó
+
+* Instalar link:https://www.docker.com/docker-toolbox[Docker Toolbox], incluye todo lo anterior.
+
+== Construcción
+
+Crearemos una virtual exclusiva:
+
+[source,bash]
+----
+docker-machine create -d=virtualbox ci // <1>
+docker-machine env ci // <2>
+eval "$(docker-machine env ci)" // <3>
+docker-compose --x-networking up // <4>
+----
+
+<1> Crea una nueva máquina virtual llamda *ci*.
+<2> Visualizar las variables de entorno de docker que serán configuradas.
+<3> Comando para configurar la línea de comandos.
+<4> Inicia el ambiente.
+
+NOTE: La primera vez puede demorar debido a la descarga de las imágenes en Docker.
+
+URLs de acceso a:
+
+* Jenkins http://<docker_host>:8080
+* Nexus http://<docker_host>:8081
+* Gogs http://<docker_host>:8082
+* SonarQube http://<docker_host>:9000
+
+Donde:
+
+* <docker-host> - Es la ip de nuestro ambiente.
+
+```
+docker-machine ip ci
+```
