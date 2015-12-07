@@ -6,6 +6,7 @@ myjenkins:
     - ~/docker-repository/ci_env/jenkins:/var/jenkins_home
 sonarqubedb:
   image: mysql:latest
+  container_name: sonarqubedb
   environment:
     - MYSQL_DATABASE=sonar
     - MYSQL_USER=sonar
@@ -19,7 +20,7 @@ sonarqube:
     - ~/docker-repository/ci_env/sonarqube/data:/opt/sonarqube/data
     - ~/docker-repository/ci_env/sonarqube/extensions:/opt/sonarqube/extensions
   environment:
-    - SONARQUBE_JDBC_URL=jdbc:mysql://cienv_sonarqubedb_1:3306/sonar?useUnicode=true&characterEncoding=utf8
+    - SONARQUBE_JDBC_URL=jdbc:mysql://sonarqubedb:3306/sonar?useUnicode=true&characterEncoding=utf8
     - SONARQUBE_JDBC_USERNAME=sonar
     - SONARQUBE_JDBC_PASSWORD=sonar
 nexus:
