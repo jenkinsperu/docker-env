@@ -1,4 +1,7 @@
 credentials:1.24
+role-strategy:2.2.0
+cloudbees-folder:5.1
+matrix-auth:1.2
 artifactdeployer:0.33
 ace-editor:1.0.1
 jquery-detached:1.1.1
