@@ -2,6 +2,16 @@ credentials:1.24
 role-strategy:2.2.0
 cloudbees-folder:5.1
 matrix-auth:1.2
+docker-traceability:1.1
+docker-commons:1.2
+docker-custom-build-environment:1.6.4
+dockerhub-notification:1.0.2
+async-http-client:1.7.24
+authentication-tokens:1.2
+build-flow-plugin:0.18
+buildgraph-view:1.1.1
+docker-workflow:1.2
+script-security:1.15
 artifactdeployer:0.33
 ace-editor:1.0.1
 jquery-detached:1.1.1
