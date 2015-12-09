@@ -30,7 +30,7 @@ eval "$(docker-machine env ci)" // <3>
 docker-compose --x-networking up // <4>
 ----
 
-<1> Crea una nueva máquina virtual llamda *ci*.
+<1> Crea una nueva máquina virtual llamada *ci*.
 <2> Visualizar las variables de entorno de docker que serán configuradas.
 <3> Comando para configurar la línea de comandos.
 <4> Inicia el ambiente.
