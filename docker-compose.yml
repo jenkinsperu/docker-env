@@ -5,7 +5,7 @@ myjenkins:
   volumes:
     - ~/docker-repository/ci_env/jenkins:/var/jenkins_home
 sonarqubedb:
-  image: mysql:latest
+  image: mysql:5.7.9
   container_name: sonarqubedb
   environment:
     - MYSQL_DATABASE=sonar
@@ -13,7 +13,7 @@ sonarqubedb:
     - MYSQL_PASSWORD=sonar
     - MYSQL_ROOT_PASSWORD=supersecret
 sonarqube:
-  image: sonarqube:latest
+  image: sonarqube:5.2
   ports:
     - 9000:9000
   volumes:
@@ -24,11 +24,11 @@ sonarqube:
     - SONARQUBE_JDBC_USERNAME=sonar
     - SONARQUBE_JDBC_PASSWORD=sonar
 nexus:
-  image: sonatype/nexus:latest
+  image: sonatype/nexus:2.11.4-01
   ports:
     - 8081:8081
 gogs:
-  image: gogs/gogs:latest
+  image: gogs/gogs:0.7.33
   ports:
     - 8082:3000
     - "2222:22"

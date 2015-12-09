@@ -1,4 +1,4 @@
-FROM jenkins:latest
+FROM jenkins:1.625.2
 
 COPY plugins.txt /usr/share/jenkins/plugins.txt
 
