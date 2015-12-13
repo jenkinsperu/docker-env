@@ -53,3 +53,4 @@ workflow-support:1.11
 kubernetes:0.5
 matrix-project:1.6
 github-branch-source:1.0
+jacoco:2.0.0
