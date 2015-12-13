@@ -54,3 +54,5 @@ kubernetes:0.5
 matrix-project:1.6
 github-branch-source:1.0
 jacoco:2.0.0
+checkstyle:3.44
+analysis-core:1.75
