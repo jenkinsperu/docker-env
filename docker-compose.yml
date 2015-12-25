@@ -28,7 +28,7 @@ nexus:
   ports:
     - 8081:8081
 gogs:
-  image: gogs/gogs:0.7.33
+  image: gogs/gogs:0.8.10
   ports:
     - 8082:3000
     - "2222:22"
