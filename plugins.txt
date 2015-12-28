@@ -31,7 +31,7 @@ git-client:1.19.0
 git-server:1.6
 scm-api:1.0
 github-api:1.71
-github:1.14.0
+github:1.14.2
 gradle:1.24
 junit:1.10
 mailer:1.16
