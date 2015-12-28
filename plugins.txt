@@ -36,7 +36,7 @@ gradle:1.24
 junit:1.10
 mailer:1.16
 maven-plugin:2.12.1
-parameterized-trigger:2.29
+parameterized-trigger:2.30
 parallel-test-executor:1.7
 sonar:2.3
 token-macro:1.12.1
