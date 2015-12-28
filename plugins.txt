@@ -24,7 +24,7 @@ durable-task:1.7
 ssh-slaves:1.10
 docker-plugin:0.16.0
 jquery:1.11.2-0
-dashboard-view:2.9.6
+dashboard-view:2.9.7
 plain-credentials:1.1
 git:2.4.1
 git-client:1.19.0
