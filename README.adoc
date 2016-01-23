@@ -6,6 +6,7 @@ En este repositorio encontramos un ambiente que incluye lo siguiente:
 * link:http://www.sonarqube.org/[SonarQube]
 * link:http://www.sonatype.org/nexus/[Nexus Repository]
 * link:https://gogs.io/[Gogs] (Git Repository)
+* link:https://www.gerritcodereview.com/[Gerrit]
 
 == Pre-requisitos
 
@@ -43,6 +44,7 @@ URLs de acceso a:
 * Nexus http://<docker_host>:8081
 * Gogs http://<docker_host>:8082
 * SonarQube http://<docker_host>:9000
+* Gerrit http://<docker_host>:8083
 
 Donde:
 
