@@ -39,3 +39,16 @@ gerrit:
     ports:
       - 8083:8080
       - "29418:29418"
+selenium-hub:
+    image: selenium/hub:2.48.2
+    container_name: selenium-hub
+    ports:
+      - 4444:4444
+node-firefox:
+    image: selenium/node-firefox:2.48.2
+    ports:
+      - 5555:5555
+    environment:
+      - REMOTE_HOST=http://192.168.99.100:5555
+      - HUB_PORT_4444_TCP_ADDR=selenium-hub
+      - HUB_PORT_4444_TCP_PORT=4444
