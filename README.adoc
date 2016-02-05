@@ -7,6 +7,7 @@ En este repositorio encontramos un ambiente que incluye lo siguiente:
 * link:http://www.sonatype.org/nexus/[Nexus Repository]
 * link:https://gogs.io/[Gogs] (Git Repository)
 * link:https://www.gerritcodereview.com/[Gerrit]
+* link:http://www.seleniumhq.org/[Selenium Hub]
 
 == Pre-requisitos
 
@@ -28,7 +29,7 @@ Crearemos una virtual exclusiva:
 docker-machine create -d=virtualbox ci // <1>
 docker-machine env ci // <2>
 eval "$(docker-machine env ci)" // <3>
-docker-compose --x-networking up // <4>
+docker-compose up // <4>
 ----
 
 <1> Crea una nueva máquina virtual llamada *ci*.
@@ -45,6 +46,7 @@ URLs de acceso a:
 * Gogs http://<docker_host>:8082
 * SonarQube http://<docker_host>:9000
 * Gerrit http://<docker_host>:8083
+* Selenium HUb http://<docker_host>:4444
 
 Donde:
 
