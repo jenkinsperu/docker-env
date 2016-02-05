@@ -1,54 +1,58 @@
-myjenkins:
-  build: .
-  ports:
-    - 8080:8080
-  volumes:
-    - ~/docker-repository/ci_env/jenkins:/var/jenkins_home
-sonarqubedb:
-  image: mysql:5.7.9
-  container_name: sonarqubedb
-  environment:
-    - MYSQL_DATABASE=sonar
-    - MYSQL_USER=sonar
-    - MYSQL_PASSWORD=sonar
-    - MYSQL_ROOT_PASSWORD=supersecret
-sonarqube:
-  image: sonarqube:5.3
-  ports:
-    - 9000:9000
-  volumes:
-    - ~/docker-repository/ci_env/sonarqube/data:/opt/sonarqube/data
-    - ~/docker-repository/ci_env/sonarqube/extensions:/opt/sonarqube/extensions
-  environment:
-    - SONARQUBE_JDBC_URL=jdbc:mysql://sonarqubedb:3306/sonar?useUnicode=true&characterEncoding=utf8
-    - SONARQUBE_JDBC_USERNAME=sonar
-    - SONARQUBE_JDBC_PASSWORD=sonar
-nexus:
-  image: sonatype/nexus:2.11.4-01
-  ports:
-    - 8081:8081
-gogs:
-  image: gogs/gogs:0.8.10
-  ports:
-    - 8082:3000
-    - "2222:22"
-  volumes:
-    - ~/docker-repository/ci_env/gogs:/data
-gerrit:
-    image: gerritforge/gerrit-ubuntu15.04:2.12
+version: '2'
+services:
+  myjenkins:
+    build: .
     ports:
-      - 8083:8080
-      - "29418:29418"
-selenium-hub:
-    image: selenium/hub:2.48.2
-    container_name: selenium-hub
-    ports:
-      - 4444:4444
-node-firefox:
-    image: selenium/node-firefox:2.48.2
-    ports:
-      - 5555:5555
+      - 8080:8080
+    volumes:
+      - ~/docker-repository/ci_env/jenkins:/var/jenkins_home
+  sonarqubedb:
+    image: mysql:5.7.9
     environment:
-      - REMOTE_HOST=http://192.168.99.100:5555
-      - HUB_PORT_4444_TCP_ADDR=selenium-hub
-      - HUB_PORT_4444_TCP_PORT=4444
+      - MYSQL_DATABASE=sonar
+      - MYSQL_USER=sonar
+      - MYSQL_PASSWORD=sonar
+      - MYSQL_ROOT_PASSWORD=supersecret
+  sonarqube:
+    image: sonarqube:5.3
+    ports:
+      - 9000:9000
+    volumes:
+      - ~/docker-repository/ci_env/sonarqube/data:/opt/sonarqube/data
+      - ~/docker-repository/ci_env/sonarqube/extensions:/opt/sonarqube/extensions
+    environment:
+      - SONARQUBE_JDBC_URL=jdbc:mysql://sonarqubedb:3306/sonar?useUnicode=true&characterEncoding=utf8
+      - SONARQUBE_JDBC_USERNAME=sonar
+      - SONARQUBE_JDBC_PASSWORD=sonar
+    links:
+      - sonarqubedb
+  nexus:
+    image: sonatype/nexus:2.11.4-01
+    ports:
+      - 8081:8081
+  gogs:
+    image: gogs/gogs:0.8.10
+    ports:
+      - 8082:3000
+      - "2222:22"
+    volumes:
+      - ~/docker-repository/ci_env/gogs:/data
+  gerrit:
+      image: gerritforge/gerrit-ubuntu15.04:2.12
+      ports:
+        - 8083:8080
+        - "29418:29418"
+  selenium-hub:
+      image: selenium/hub:2.48.2
+      ports:
+        - 4444:4444
+  node-firefox:
+      image: selenium/node-firefox:2.48.2
+      ports:
+        - 5555:5555
+      environment:
+        - REMOTE_HOST=http://node-firefox:5555
+        - HUB_PORT_4444_TCP_ADDR=selenium-hub
+        - HUB_PORT_4444_TCP_PORT=4444
+      links:
+        - selenium-hub
