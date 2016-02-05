@@ -1,6 +1,6 @@
 version: '2'
 services:
-  myjenkins:
+  jenkins-server:
     build: .
     ports:
       - 8080:8080
