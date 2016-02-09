@@ -61,3 +61,4 @@ findbugs:4.63
 branch-api:1.1
 docker-build-publish:1.1
 docker-build-step:1.33
+icon-shim:2.0.2
