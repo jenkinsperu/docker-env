@@ -63,3 +63,7 @@ docker-build-publish:1.2
 docker-build-step:1.33
 icon-shim:2.0.3
 swarm:2.0
+pipeline-stage-view:1.0
+momentjs:1.1
+handlebars:1.1
+pipeline-rest-api:1.0
