@@ -30,11 +30,11 @@ git:2.4.4
 git-client:1.19.6
 git-server:1.6
 scm-api:1.2
-github-api:1.72.1
+github-api:1.75
 github:1.18.2
 gradle:1.24
-junit:1.11
-mailer:1.16
+junit:1.12
+mailer:1.17
 maven-plugin:2.12.1
 parameterized-trigger:2.30
 parallel-test-executor:1.8
@@ -59,7 +59,7 @@ checkstyle:3.45
 analysis-core:1.76
 findbugs:4.64
 branch-api:1.6
-docker-build-publish:1.2.1
+docker-build-publish:1.2.2
 docker-build-step:1.34
 icon-shim:2.0.3
 swarm:2.0
