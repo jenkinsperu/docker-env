@@ -43,11 +43,11 @@ services:
         - 8083:8080
         - "29418:29418"
   selenium-hub:
-      image: selenium/hub:2.48.2
+      image: selenium/hub:2.53.0
       ports:
         - 4444:4444
   node-firefox:
-      image: selenium/node-firefox:2.48.2
+      image: selenium/node-firefox:2.53.0
       ports:
         - 5555:5555
       environment:
