@@ -77,3 +77,4 @@ ssh-credentials:1.6.1
 cloudbees-bitbucket-branch-source:1.5
 mercurial:1.54
 gitlab-plugin:1.2.3
+openshift-pipeline:1.0.18
