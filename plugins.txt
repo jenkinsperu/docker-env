@@ -26,7 +26,7 @@ docker-plugin:0.16.0
 jquery:1.11.2-0
 dashboard-view:2.9.7
 plain-credentials:1.1
-git:2.4.4
+git:2.5.0
 git-client:1.19.6
 git-server:1.6
 scm-api:1.2
@@ -40,7 +40,7 @@ parameterized-trigger:2.30
 parallel-test-executor:1.8
 sonar:2.4.3
 token-macro:1.12.1
-workflow-aggregator:2.1
+workflow-aggregator:2.2
 workflow-api:2.1
 workflow-basic-steps:2.0
 workflow-cps-global-lib:2.0
@@ -63,11 +63,11 @@ docker-build-publish:1.2.2
 docker-build-step:1.34
 icon-shim:2.0.3
 swarm:2.1
-pipeline-stage-view:1.4
+pipeline-stage-view:1.5
 momentjs:1.1
 handlebars:1.1
 structs:1.1
-pipeline-rest-api:1.4
+pipeline-rest-api:1.5
 pipeline-build-step:2.1
 pipeline-stage-step:2.1
 pipeline-input-step:2.0
@@ -77,4 +77,4 @@ ssh-credentials:1.6.1
 cloudbees-bitbucket-branch-source:1.5
 mercurial:1.54
 gitlab-plugin:1.2.3
-openshift-pipeline:1.0.18
+openshift-pipeline:1.0.19
