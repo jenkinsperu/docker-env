@@ -5,7 +5,7 @@ En este repositorio encontramos un ambiente que incluye lo siguiente:
 * link:https://jenkins-ci.org/[Jenkins]
 * link:http://www.sonarqube.org/[SonarQube]
 * link:http://www.sonatype.org/nexus/[Nexus Repository]
-* link:https://gogs.io/[Gogs] (Git Repository)
+* link:https://gitlab.com/[GitLab] (Git Repository)
 * link:https://www.gerritcodereview.com/[Gerrit]
 * link:http://www.seleniumhq.org/[Selenium Hub]
 
@@ -43,7 +43,7 @@ URLs de acceso a:
 
 * Jenkins http://<docker_host>:8080
 * Nexus http://<docker_host>:8081
-* Gogs http://<docker_host>:8082
+* GitLab http://<docker_host>:8082
 * SonarQube http://<docker_host>:9000
 * Gerrit http://<docker_host>:8083
 * Selenium HUb http://<docker_host>:4444
