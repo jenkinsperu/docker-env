@@ -31,7 +31,7 @@ services:
     ports:
       - 8081:8081
   gitlab:
-    image: 'gitlab/gitlab-ce:8.9.0-ce.0'
+    image: 'gitlab/gitlab-ce:8.11.5-ce.0'
     container_name: gitlab
     environment:
       GITLAB_OMNIBUS_CONFIG: |
