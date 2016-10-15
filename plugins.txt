@@ -76,3 +76,4 @@ gitlab-plugin:1.4.2
 pipeline-graph-analysis:1.2
 display-url-api:0.5
 pipeline-milestone-step:1.1
+pipeline-model-definition:0.4
