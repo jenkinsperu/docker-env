@@ -30,20 +30,6 @@ services:
     image: sonatype/nexus3:3.2.0
     ports:
       - 8081:8081
-  gitlab:
-    image: 'gitlab/gitlab-ce:8.11.5-ce.0'
-    container_name: gitlab
-    environment:
-      GITLAB_OMNIBUS_CONFIG: |
-        external_url 'http://gitlab:8082'
-        gitlab_rails['gitlab_shell_ssh_port'] = 2222
-    ports:
-      - '8082:8082'
-      - '2222:22'
-    volumes:
-      - '/srv/gitlab/config:/etc/gitlab'
-      - '/srv/gitlab/logs:/var/log/gitlab'
-      - '/srv/gitlab/data:/var/opt/gitlab'
   gerrit:
       image: gerritforge/gerrit-ubuntu15.04:2.12.2
       ports:
