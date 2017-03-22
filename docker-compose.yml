@@ -16,7 +16,7 @@ services:
       - MYSQL_PASSWORD=sonar
       - MYSQL_ROOT_PASSWORD=supersecret
   sonarqube:
-    image: sonarqube:6.2
+    image: sonarqube:6.3
     ports:
       - 9000:9000
     volumes:
@@ -33,7 +33,7 @@ services:
     ports:
       - 8081:8081
   gerrit:
-      image: gerritforge/gerrit-ubuntu15.04:2.12.2
+      image: gerritforge/gerrit-ubuntu15.04:2.13.6
       ports:
         - 8083:8080
         - "29418:29418"
