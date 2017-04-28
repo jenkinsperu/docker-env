@@ -1,7 +1,7 @@
-FROM jenkinsci/jenkins:2.55
+FROM jenkinsci/jenkins:2.57
 
 LABEL maintainer="Eddú Meléndez" \
-      jenkins.version="2.55"
+      jenkins.version="2.57"
 
 RUN /usr/local/bin/install-plugins.sh slack:2.2 pipeline-model-definition:1.1.3 \
 junit:1.20 jacoco:2.2.0 gradle:1.26 gitlab-plugin:1.4.5 github-branch-source:2.0.5 \
