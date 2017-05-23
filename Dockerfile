@@ -1,7 +1,7 @@
-FROM jenkinsci/jenkins:2.61
+FROM jenkinsci/jenkins:2.62
 
 LABEL maintainer="Eddú Meléndez" \
-      jenkins.version="2.61"
+      jenkins.version="2.62"
 
 RUN /usr/local/bin/install-plugins.sh blueocean:1.0.1 slack:2.2 pipeline-model-definition:1.1.4 \
 junit:1.20 jacoco:2.2.1 gradle:1.26 gitlab-plugin:1.4.5 github-branch-source:2.0.5 \
