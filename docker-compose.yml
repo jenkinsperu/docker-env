@@ -29,7 +29,7 @@ services:
     links:
       - sonarqubedb
   nexus:
-    image: sonatype/nexus3:3.6.2
+    image: sonatype/nexus3:3.7.0
     ports:
       - 8081:8081
   gerrit:
