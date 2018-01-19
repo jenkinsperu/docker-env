@@ -1,9 +1,9 @@
-FROM jenkinsci/jenkins:2.101
+FROM jenkinsci/jenkins:2.102
 
 LABEL maintainer="Eddú Meléndez" \
-      jenkins.version="2.101"
+      jenkins.version="2.102"
 
-RUN /usr/local/bin/install-plugins.sh blueocean:1.3.5 slack:2.3 pipeline-model-definition:1.2.6 \
+RUN /usr/local/bin/install-plugins.sh blueocean:1.4.0 slack:2.3 pipeline-model-definition:1.2.6 \
 junit:1.23 jacoco:2.2.1 gradle:1.28 gitlab-plugin:1.5.2 github-branch-source:2.3.2 \
 docker-traceability:1.2 docker-workflow:1.14 dockerhub-notification:2.2.1 \
 docker-custom-build-environment:1.6.5 docker-build-publish:1.3.2 \
