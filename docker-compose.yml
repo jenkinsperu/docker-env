@@ -16,7 +16,7 @@ services:
       - MYSQL_PASSWORD=sonar
       - MYSQL_ROOT_PASSWORD=supersecret
   sonarqube:
-    image: sonarqube:6.7
+    image: sonarqube:7.0
     ports:
       - 9000:9000
     volumes:
