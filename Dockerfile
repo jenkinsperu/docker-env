@@ -3,7 +3,7 @@ FROM jenkinsci/jenkins:2.118
 LABEL maintainer="Eddú Meléndez" \
       jenkins.version="2.118"
 
-RUN /usr/local/bin/install-plugins.sh blueocean:1.5.0 slack:2.3 pipeline-model-definition:1.2.9 \
+RUN /usr/local/bin/install-plugins.sh jdk-tool:1.1 blueocean:1.5.0 slack:2.3 pipeline-model-definition:1.2.9 \
 junit:1.24 jacoco:3.0.1 gradle:1.28 gitlab-plugin:1.5.5 github-branch-source:2.3.4 \
 docker-traceability:1.2 docker-workflow:1.15.1 dockerhub-notification:2.2.1 \
 docker-custom-build-environment:1.7.3 docker-build-publish:1.3.2 \
