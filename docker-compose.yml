@@ -9,14 +9,14 @@ services:
     labels:
       - "jenkins.environment=ci"
   sonarqubedb:
-    image: mysql:5.7.9
+    image: mysql:5.7.25
     environment:
       - MYSQL_DATABASE=sonar
       - MYSQL_USER=sonar
       - MYSQL_PASSWORD=sonar
       - MYSQL_ROOT_PASSWORD=supersecret
   sonarqube:
-    image: sonarqube:7.1
+    image: sonarqube:7.6-community
     ports:
       - 9000:9000
     volumes:
